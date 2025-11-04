@@ -30,19 +30,25 @@ const CurlExecutorPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const exampleCurl = `curl -X POST "https://api.vapi.ai/credential" \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer 8a680935-5818-4e4f-a03f-8ef450a3722e" \\
+  const exampleCurl = `curl -X POST "https://api.vapi.ai/credential" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer 235d6aa2-3ee9-494e-98ac-5c9531f4f9be" \
   -d '{
     "provider": "byo-sip-trunk",
-    "name": "ZDG",
+    "name": "zpro_teste_ip_tcp_2",
     "gateways": [{
-      "ip": "sipv2.wavoip.com"
+      "ip": "141.11.73.93",
+      "outboundProtocol":"tcp"
     }],
     "outboundLeadingPlusEnabled": true,
     "outboundAuthenticationPlan": {
-      "authUsername": "K797a2g2df7a7",
-      "authPassword": "A96d4h9d520de"
+      "authUsername": "authUsername",
+      "authPassword": "authPassword",
+	  "sipRegisterPlan":{
+         "domain":"141.11.73.93",
+         "username":"username",
+         "realm":"sipv2.wavoip.com"
+      }
     }
   }'`;
 
