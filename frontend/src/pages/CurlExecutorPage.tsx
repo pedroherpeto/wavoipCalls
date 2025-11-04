@@ -32,7 +32,7 @@ const CurlExecutorPage: React.FC = () => {
 
   const exampleCurl = `curl -X POST "https://api.vapi.ai/credential" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer 235d6aa2-3ee9-494e-98ac-5c9531f4f9be" \
+  -H "Authorization: Bearer 235d6aa2-3ee9-494e-98ac" \
   -d '{
     "provider": "byo-sip-trunk",
     "name": "zpro_teste_ip_tcp_2",
